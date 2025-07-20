@@ -21,7 +21,7 @@ const plantRouter = require('./routes/plant');
 let app = express();
 
 // Mongoose connection
-const connectionString = 'mongodb+srv://gms_user:ZilsSUvq53DIks5y@bellevueuniversity.qgo4d.mongodb.net/?retryWrites=true&w=majority&appName=BellevueUniversity';
+const connectionString = process.env.DB_CONNECTION || 'mongodb+srv://gms_user:ZilsSUvq53DIks5y@bellevueuniversity.qgo4d.mongodb.net/?retryWrites=true&w=majority&appName=BellevueUniversity';
 const dbName = 'gms'; // Database name
 
 // Function to connect to the database
